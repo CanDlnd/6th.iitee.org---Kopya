@@ -1,0 +1,14 @@
+.text-center p {
+    color: #293e5e;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition-delay: 0.75s;
+    animation: topıcTextAnimate 1.5s forwards;
+    text-align: center !important;
+}
+
+.text-center p.active {
+    opacity: 1;
+    transform: translateY(0);
+}

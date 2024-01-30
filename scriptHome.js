@@ -4,10 +4,8 @@ document.addEventListener("scroll", function () {
   var about = document.querySelector('.about');
 
   if (scrollPosition > 100) {
-    // navbarHome.style.backgroundColor = '#ffffff';
     about.classList.add('aboutAnimated');
   } else {
-    // navbarHome.style.backgroundColor = '#ffffff';
     about.classList.remove('aboutAnimated');
   }
 });
@@ -45,7 +43,7 @@ $(document).ready(function () {
 const countdown = document.querySelector(".countdown");
 
 const interval = setInterval(() => {
-  const plannedDate = new Date(2024, 3, 8);
+  const plannedDate = new Date(2024, 2, 27);
   const current = new Date();
   const diff = plannedDate - current;
 
@@ -66,4 +64,35 @@ const interval = setInterval(() => {
     countdown.innerHTML = "<h1>TIME OVER...</h1>";
   }
 }, 1000);
+
+
+jQuery(document).ready(function() {
+  
+    var btn = $('#buttonUp');
+  
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        setTimeout(function() {
+          btn.addClass('show');
+        }, 0);
+      } else {
+        btn.removeClass('show');
+      }
+    });
+  
+    $(window).scroll();
+    
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 0}, '300');
+    });
+  
+  });
+  
+  /*CALL-FOOTER AND CALL-NAVBAR*/
+
+$(function(){
+    $("#footer-container").load("footer.html");
+    $("#navbar-container").load("navbar.html");
+});
 

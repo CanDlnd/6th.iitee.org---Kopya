@@ -616,8 +616,9 @@
 .aboutProjectChild1 {
     text-align: justify;
 }
-.aboutProjectChild1  b.fst-italic{
-    color:#333333;
+
+.aboutProjectChild1 b.fst-italic {
+    color: #333333;
 }
 
 
@@ -1299,7 +1300,8 @@ footer a {
         font-size: 1.3em !important;
     }
 
-    .aboutProject p,.aboutProjectChild1 {
+    .aboutProject p,
+    .aboutProjectChild1 {
         font-size: 14px;
     }
 
@@ -1478,11 +1480,53 @@ footer a {
         font-size: 1.2em;
         height: 30vh;
         animation: none;
-        /* margin: 108px 0 0 0 !important; */
     }
 }
 
-/*MAP*/
+/*---------------------------------LOGO-ANIMATION-------------------------------------*/
+.tecched img,
+.fit4future img {
+    width: 100%;
+    margin: 20px 0;
+    animation: marquee 8s ease-in-out infinite;
+}
+
+.tecched img,
+.fit4future img {
+    max-width: calc(12vw + 10px);
+    margin: 0 10px;
+}
+
+
+.tecched img,
+.fit4future img {
+    animation: imgOnly 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
+
+.tecched img {
+    animation-delay: 0s;
+}
+
+.fit4future img {
+    animation-delay: 1.5s;
+}
+
+@keyframes imgOnly {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+        filter: drop-shadow(7px 7px 2px rgba(92, 92, 92, 0));
+    }
+
+    50% {
+        transform: translateY(-7px) translateX(-7px);
+        filter: drop-shadow(7px 7px 2px rgba(92, 92, 92, 0.521));
+
+    }
+}
+
+/*--------------------------------------------MAP---------------------------------*/
 .maps {
     border: 2px solid rgba(58, 58, 58, 0.371);
     height: 70vh;
@@ -1492,6 +1536,16 @@ footer a {
     .maps {
         width: 80%;
         height: 40vh;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container img {
+        margin-bottom: 15px;
+        max-width: calc(15vw + 10px);
     }
 }
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Logo Marquee</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .logo-container {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            margin: 20px 0;
+            animation: marquee 8s ease-in-out infinite;
+        }
+
+        .logo-container img {
+            max-width: calc(10vw + 10px);
+            margin: 0 5px;
+        }
+
+
+        .logo-container img:nth-child(n+1) {
+            animation: imgOnly 6s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+        }
+
+        .logo-container img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .logo-container img:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .logo-container img:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .logo-container img:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+        .logo-container img:nth-child(5) {
+            animation-delay: 2s;
+        }
+        .logo-container img:nth-child(6) {
+            animation-delay: 2.5s;
+        }
+
+        @keyframes imgOnly {
+            0%,100% {
+                transform: translateY(0px);
+                filter: drop-shadow(7px 7px 2px rgba(92, 92, 92, 0));
+            }
+
+            50% {
+                transform: translateY(-7px) translateX(-7px);
+                filter: drop-shadow(7px 7px 2px rgba(92, 92, 92, 0.521));
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="logo-container d-flex justify-content-center align-items-center">
+                <img src="6thLogo.png" alt="Logo 1">
+                <img src="6thLogo.png" alt="Logo 2">
+                <img src="6thLogo.png" alt="Logo 3">
+                <img src="6thLogo.png" alt="Logo 4">
+                <img src="6thLogo.png" alt="Logo 5">
+                <img src="6thLogo.png" alt="Logo 6">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

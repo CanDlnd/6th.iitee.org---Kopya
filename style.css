@@ -1488,7 +1488,6 @@ footer a {
 .fit4future img {
     width: 100%;
     margin: 20px 0;
-    animation: marquee 8s ease-in-out infinite;
 }
 
 .tecched img,
@@ -1500,7 +1499,7 @@ footer a {
 
 .tecched img,
 .fit4future img {
-    animation: imgOnly 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    animation: imgOnly 5s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite;
 }
 
 .tecched img {
@@ -1508,7 +1507,7 @@ footer a {
 }
 
 .fit4future img {
-    animation-delay: 1.5s;
+    animation-delay: 2.5s;
 }
 
 @keyframes imgOnly {

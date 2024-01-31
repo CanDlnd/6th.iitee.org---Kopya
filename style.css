@@ -1544,7 +1544,7 @@ footer a {
 
     .logo-container img {
         margin-bottom: 15px;
-        max-width: calc(15vw + 10px);
+        max-width: calc(20vw + 10px);
     }
 }
 
